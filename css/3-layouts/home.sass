@@ -1,0 +1,157 @@
+.home
+	+size(100%)
+
+	body
+		+size(100%)
+		
+		header
+			+size(100% calc(100% + 60px))
+			+outer-container(12)
+
+			.header-home
+				position: relative
+				+size(100% calc(100% - 60px))
+				overflow: hidden
+
+				video#bgvid
+					position: fixed
+					top: 50%
+					left: 50%
+					min-width: 100%
+					min-height: 100%
+					width: auto
+					height: auto
+					z-index: -100
+					-webkit-transform: translateX(-50%) translateY(-50%)
+					transform: translateX(-50%) translateY(-50%)
+					background-size: cover
+
+				div.header-kicker
+					+size(100%)
+					+background(rgba(40,40,40,0.4))
+					text-align: center
+					@include display(flex)
+					@include flex-direction(column)
+					@include align-items(center)
+					@include justify-content(center)
+
+					h1
+						font-size: $base-font-size * 4
+						color: $light-blue
+						text-transform: uppercase
+
+						+media($tablet-landscape)
+							font-size: $base-font-size * 3.5
+						+media($tablet-portrait)
+							font-size: $base-font-size * 3
+						+media($mobile)
+							font-size: $base-font-size * 2
+
+
+						span
+							color: white
+					h2
+						color: white
+						font-size: $base-font-size * 3
+						text-transform: uppercase
+
+						+media($tablet-landscape)
+							font-size: $base-font-size * 2.5
+						+media($tablet-portrait)
+							font-size: $base-font-size * 1.5
+						+media($mobile)
+							font-size: $base-font-size
+					a
+						@include icon(before, ico-arrow-down)
+							color: white
+							font-size: 24px
+						padding-top: 7em
+			.main-nav
+				+size(100% 60px)
+				+background(white)
+				+outer-container(100%)
+
+				.container
+					+size(100% 60px)
+					+span-columns(10)
+					+shift(1)
+					+align-items(center)
+					+display(flex)
+					+justify-content(space-between)
+
+					.logo
+						+flex(1)
+
+					ul
+						+flex(4)
+						+display(flex)
+						+justify-content(flex-end)
+	
+						li
+							display: inline
+							+padding(0 0.4em)
+
+							a
+								color: $base-menu-color
+
+								&:hover
+									color: lighten($base-menu-color, 40%)
+		div.div-hr
+			+background(white)
+
+			hr.main-hr-menu
+				height: 5px
+				border: 0
+				box-shadow: inset 0 12px 12px -12px rgba(0, 0, 0, 0.5)
+				margin: 0px auto
+
+
+		main.main-home
+			+background(white)
+			padding-top: 5em
+
+			section.about
+				text-align: center
+				+outer-container(12)
+
+				div.accordion-tabs
+					+margin(2em null 2em null)
+
+					ul.accordion-tabs-headers
+
+						li.tab-item
+							border-top: solid 3px $base-menu-color
+							display: inline
+							+padding(10px 8px null 8px)
+							text-transform: uppercase
+							font-size: $base-font-size * 0.8
+							+transition(all 0.5s ease-in-out)
+
+							&:nth-child(1):before
+								content: ""
+								width: 0
+								height: 0
+								position: absolute
+								margin-top: -11px
+								+border-style(solid)
+								+border-width(5px 5px)
+								+border-color($light-blue)
+								+transform(rotate(45deg))
+								+transition(all 0.5s ease-in-out)
+
+							a
+								color: $base-menu-color
+								padding-top: 20px
+								+transition(all 0.5s ease-in-out)
+
+							&.active 
+								+border-color($light-blue)
+								+transition(all 0.5s ease-in-out)
+
+								a
+									color: $light-blue
+									+transition(all 0.5s ease-in-out)
+
+
+
+			
