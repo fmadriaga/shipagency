@@ -62,7 +62,7 @@
 						+media($mobile)
 							font-size: $base-font-size
 					a
-						@include icon(before, ico-arrow-down)
+						+icon(before, ico-arrow-down)
 							color: white
 							font-size: 24px
 						padding-top: 7em
@@ -102,7 +102,7 @@
 			hr.main-hr-menu
 				height: 5px
 				border: 0
-				box-shadow: inset 0 12px 12px -12px rgba(0, 0, 0, 0.5)
+				box-shadow: inset 0 12px 12px -12px rgba(0, 0, 0, 0.2)
 				margin: 0px auto
 
 
@@ -110,47 +110,7 @@
 			+background(white)
 			padding-top: 5em
 
-			section.about
-				text-align: center
-				+outer-container(12)
-
-				div.accordion-tabs
-					+margin(2em null 2em null)
-
-					ul.accordion-tabs-headers
-
-						li.tab-item
-							border-top: solid 3px $base-menu-color
-							display: inline
-							+padding(10px 8px null 8px)
-							text-transform: uppercase
-							font-size: $base-font-size * 0.8
-							+transition(all 0.5s ease-in-out)
-
-							&:nth-child(1):before
-								content: ""
-								width: 0
-								height: 0
-								position: absolute
-								margin-top: -11px
-								+border-style(solid)
-								+border-width(5px 5px)
-								+border-color($light-blue)
-								+transform(rotate(45deg))
-								+transition(all 0.5s ease-in-out)
-
-							a
-								color: $base-menu-color
-								padding-top: 20px
-								+transition(all 0.5s ease-in-out)
-
-							&.active 
-								+border-color($light-blue)
-								+transition(all 0.5s ease-in-out)
-
-								a
-									color: $light-blue
-									+transition(all 0.5s ease-in-out)
+			
 
 
 

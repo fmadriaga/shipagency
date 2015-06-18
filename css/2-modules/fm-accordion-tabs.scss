@@ -1,0 +1,153 @@
+.fm-accordion-tabs{
+	@include margin(2em null 2em null);
+
+	ul.accordion-tabs-headers{
+
+		li.tab-item{
+			border-top: solid 5px $base-menu-color;
+			display: inline;
+			@include padding(10px 8px null 8px);
+			text-transform: uppercase;
+			font-size: $base-font-size * 0.8;
+			@include transition(all 0.5s ease-in-out);
+
+			@include media($tablet-portrait){
+				font-size: $base-font-size * 0.7;
+				@include padding(10px 5px null 5px);
+			}
+			@include media($mobile){
+				padding-top:37px;
+			}
+
+			&:nth-child(1):before{
+				content: "";
+				width: 0;
+				height: 0;
+				position: absolute;
+				margin-top: -13px;
+				@include border-style(solid);
+				@include border-width(6px 6px);
+				@include border-color($light-blue);
+				@include transform(rotate(45deg));
+				@include transition(all 0.5s ease-in-out);
+
+				@include media($mobile){
+					margin-top: -3px;
+				}
+			}
+
+			a{
+				color: $base-menu-color;
+				padding-top: 20px;
+				@include transition(all 0.5s ease-in-out);
+				
+				@include media($mobile){
+					font-size: 0px;
+
+					&:before{
+						font-size: 50px;
+						padding-top: 30px;
+					}
+				}
+			}
+
+			&.active {
+				@include border-color($light-blue);
+				@include transition(all 0.5s ease-in-out);
+
+				a{
+					color: $light-blue;
+					@include transition(all 0.5s ease-in-out);
+				}
+			}
+		}
+	}
+	ul.accordion-tabs-contents{
+		@include margin(2em null null null);
+		@include outer-container(12);
+
+		li.tab-content{
+			@include span-columns(10);
+			@include shift(1);
+			display: none;
+
+			&:first-child{
+				display: initial;
+			}
+
+			article{
+				div{
+					width: 230px;
+					height: 230px;
+					@include border-top-radius(50%);
+					@include border-right-radius(50%);
+					@include border-bottom-radius(50%);
+					@include border-left-radius(50%);
+					overflow: hidden;
+					@include margin(null auto null auto);
+
+					@include media($tablet-landscape){
+						@include size(200px);
+					}
+					@include media($tablet-portrait){
+						@include size(190px);
+					}
+					@include media($mobile){
+						@include size(140px);
+					}
+
+					img{
+						width: 100%;
+					}
+				}
+				
+				h3{
+					margin-top: 1em
+				}
+			}
+
+			&.tab-content-2{
+				article{
+					@include span-columns(6);
+
+					@include media($tablet-portrait){
+						@include span-columns(12);
+					}
+					@include media($mobile){
+						@include span-columns(12);
+					}
+				}
+			}
+
+			&.tab-content-3{
+				article{
+					@include span-columns(4);
+
+					@include media($tablet-portrait){
+						@include span-columns(12);
+					}
+					@include media($mobile){
+						@include span-columns(12);
+					}
+				}
+			}
+
+			&.tab-content-4{
+				article{
+					@include span-columns(3);
+					
+					@include media($tablet-landscape){
+						@include span-columns(6);
+						@include omega(2n);
+					}
+					@include media($tablet-portrait){
+						@include span-columns(12);
+					}
+					@include media($mobile){
+						@include span-columns(12);
+					}
+				}
+			}
+		}
+	}
+}

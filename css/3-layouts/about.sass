@@ -1,0 +1,62 @@
+section.about
+	text-align: center
+
+	ul.accordion-tabs-headers
+		li
+			&:nth-child(1)
+				a
+					+icon(before, ico-why-us)
+
+			&:nth-child(2)
+				a
+					+icon(before, ico-testimonial)
+
+			&:nth-child(3)
+				a
+					+icon(before, ico-benefit)
+
+			&:nth-child(4)
+				a
+					+icon(before, ico-vision)
+
+			&:nth-child(5)
+				a
+					+icon(before, ico-mision)
+			a
+				&:before
+					+media($tablet-landscape)
+						display: none
+					+media($tablet-portrait)
+						display: none
+
+
+	ul.accordion-tabs-contents
+		
+		#content-tab-item-1
+			article
+
+				&:nth-child(1)
+					h3
+						+icon(before, ico-thumb-up)
+							color: $light-blue
+							font-size: 70px
+
+				&:nth-child(2)
+					h3
+						+icon(before, ico-legal)
+							color: $light-blue
+							font-size: 70px
+
+				&:nth-child(3)
+					h3
+						+icon(before, ico-grafica)
+							color: $light-blue
+							font-size: 70px
+
+				&:nth-child(4)
+					h3
+						+icon(before, ico-ship)
+							color: $light-blue
+							font-size: 70px
+	
+
