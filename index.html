@@ -299,19 +299,22 @@ $(document).ready(function() {
 		$(this).hover(function(){
 			var $margin = 0; //($('ul.accordion-tabs-headers li.tab-item:nth-child(1)').width()-16)*48/100;
 			var prevAll = $(this).prevAll();
+			var $padding = parseInt($(this).css("padding-left")) + parseInt($(this).css("padding-right"));
 
 			prevAll.each(function(){
-				$margin = $margin + $(this).width() + 16;
+				$margin = $margin + $(this).width() + $padding;
 			});
-			$margin = $margin + ($(this).width()-16)*48/100;
+			$margin = $margin + ($(this).width()-$padding)*48/100;
 			$rombo.append('<style>ul.accordion-tabs-headers li.tab-item:nth-child(1)::before{ margin-left: '+ $margin +'px; }</style>');
 		}, function(){
 			var $active = $rombo.parent().find(".active");
 			var $margin = 0;
+			var $padding = parseInt($active.css("padding-left")) + parseInt($active.css("padding-right"));
+
 			$active.prevAll().each(function(){
-				$margin = $margin + $(this).width() + 16;
+				$margin = $margin + $(this).width() + $padding;
 			});
-			$margin = $margin + ($active.width()-16)*48/100;
+			$margin = $margin + ($active.width()-$padding)*48/100;
 			$rombo.append('<style>ul.accordion-tabs-headers li.tab-item:nth-child(1)::before{ margin-left: '+ $margin +'px; }</style>');
 		});
 	});

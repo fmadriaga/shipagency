@@ -3,31 +3,26 @@ section.about
 
 	ul.accordion-tabs-headers
 		li
-			&:nth-child(1)
-				a
-					+icon(before, ico-why-us)
+			+media($mobile)
+				&:nth-child(1)
+					a
+						+icon(before, ico-why-us)
 
-			&:nth-child(2)
-				a
-					+icon(before, ico-testimonial)
+				&:nth-child(2)
+					a
+						+icon(before, ico-testimonial)
 
-			&:nth-child(3)
-				a
-					+icon(before, ico-benefit)
+				&:nth-child(3)
+					a
+						+icon(before, ico-benefit)
 
-			&:nth-child(4)
-				a
-					+icon(before, ico-vision)
+				&:nth-child(4)
+					a
+						+icon(before, ico-vision)
 
-			&:nth-child(5)
-				a
-					+icon(before, ico-mision)
-			a
-				&:before
-					+media($tablet-landscape)
-						display: none
-					+media($tablet-portrait)
-						display: none
+				&:nth-child(5)
+					a
+						+icon(before, ico-mision)
 
 
 	ul.accordion-tabs-contents

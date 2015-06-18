@@ -2659,42 +2659,37 @@ picture {
 
 section.about {
   text-align: center; }
-  section.about ul.accordion-tabs-headers li:nth-child(1) a:before {
-    content: "";
-    speak: none;
-    font-style: normal;
-    font-weight: normal;
-    font-family: "FontAwesome"; }
-  section.about ul.accordion-tabs-headers li:nth-child(2) a:before {
-    content: "";
-    speak: none;
-    font-style: normal;
-    font-weight: normal;
-    font-family: "FontAwesome"; }
-  section.about ul.accordion-tabs-headers li:nth-child(3) a:before {
-    content: "";
-    speak: none;
-    font-style: normal;
-    font-weight: normal;
-    font-family: "FontAwesome"; }
-  section.about ul.accordion-tabs-headers li:nth-child(4) a:before {
-    content: "";
-    speak: none;
-    font-style: normal;
-    font-weight: normal;
-    font-family: "FontAwesome"; }
-  section.about ul.accordion-tabs-headers li:nth-child(5) a:before {
-    content: "";
-    speak: none;
-    font-style: normal;
-    font-weight: normal;
-    font-family: "FontAwesome"; }
-  @media screen and (min-width: 768px) and (max-width: 1023px) {
-    section.about ul.accordion-tabs-headers li a:before {
-      display: none; } }
-  @media screen and (min-width: 481px) and (max-width: 767px) {
-    section.about ul.accordion-tabs-headers li a:before {
-      display: none; } }
+  @media screen and (max-width: 480px) {
+    section.about ul.accordion-tabs-headers li:nth-child(1) a:before {
+      content: "";
+      speak: none;
+      font-style: normal;
+      font-weight: normal;
+      font-family: "FontAwesome"; }
+    section.about ul.accordion-tabs-headers li:nth-child(2) a:before {
+      content: "";
+      speak: none;
+      font-style: normal;
+      font-weight: normal;
+      font-family: "FontAwesome"; }
+    section.about ul.accordion-tabs-headers li:nth-child(3) a:before {
+      content: "";
+      speak: none;
+      font-style: normal;
+      font-weight: normal;
+      font-family: "FontAwesome"; }
+    section.about ul.accordion-tabs-headers li:nth-child(4) a:before {
+      content: "";
+      speak: none;
+      font-style: normal;
+      font-weight: normal;
+      font-family: "FontAwesome"; }
+    section.about ul.accordion-tabs-headers li:nth-child(5) a:before {
+      content: "";
+      speak: none;
+      font-style: normal;
+      font-weight: normal;
+      font-family: "FontAwesome"; } }
   section.about ul.accordion-tabs-contents #content-tab-item-1 article:nth-child(1) h3:before {
     content: "";
     speak: none;
