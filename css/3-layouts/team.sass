@@ -4,23 +4,28 @@ section.team
 	padding-top: 4em
 	+background(url('../images/team-background.jpg'))
 
+	article.main-section
+		color: white
+
 	div.bubbles-3d
 		$bubble-size: 300px
 		$bubble-second-size: $bubble-size * 0.7
 		$bubble-third-size: $bubble-size * 0.5
+		$text-color: white
 		+outer-container(12)
 		position: relative
 		min-height: 100%
 
 		ul.bubbles-3d-container
+			position: relative
 			+span-columns(10)
 			+shift(1)
-			position: relative
 			
 			li.bubbles-3d-item
+				position: relative
 				height: $bubble-size
-				width: 100%
-				position: absolute
+				color: $text-color
+				float: left
 				
 				div
 					+size($bubble-size)
@@ -32,11 +37,18 @@ section.team
 
 					img
 						width: 100%
-						+filter(grayscale(70%))
+						+filter(grayscale(80%))
+						+filter(brightness(20%))
+
+					&:hover
+						img
+							+filter(grayscale(0%))
+							+filter(brightness(50%))
 
 				article
-					+span-columns(8)
-					+shift(2)
+					position: absolute
+					width: 200%
+					+margin(1em 50% null -50%)
 					display: none
 
 					h3
@@ -63,26 +75,43 @@ section.team
 
 				&.bubble-second-left
 					z-index: 2
+					margin-right: -3%
+
 					div
 						+size($bubble-second-size)
-						+margin(($bubble-size * 0.15) 18%)
+						+margin(($bubble-size * 0.15) null ($bubble-size * 0.15) null)
 
 				&.bubble-third-left
 					z-index: 1
+					margin-right: -3%
+					margin-left: 7.5%
 
 					div
 						+size($bubble-third-size)
-						+margin(($bubble-size * 0.25) 5%)
+						+margin(($bubble-size * 0.25) null ($bubble-size * 0.25) null)
 
 				&.bubble-second-right
-					@extend .bubble-second-left
+					z-index: 2
+					margin-left: -3%
+
 					div
-						+margin(($bubble-size * 0.15) 18% null auto)
+						+size($bubble-second-size)
+						+margin(($bubble-size * 0.15) null ($bubble-size * 0.15) null)
 
 				&.bubble-third-right
-					@extend .bubble-third-left
+					z-index: 1
+					margin-left: -3%
+
 					div
-						+margin(($bubble-size * 0.25) 5% null auto)
+						+size($bubble-third-size)
+						+margin(($bubble-size * 0.25) null ($bubble-size * 0.25) null)
 				
 				&.bubble-hidden
 					display: none
+
+				&.bubble-penultimate-left
+					margin-left: #{$bubble-third-size}
+
+				&.bubble-last-left
+					margin-left: calc(50% - (#{$bubble-size} / 2))
+

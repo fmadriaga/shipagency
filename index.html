@@ -349,6 +349,70 @@ $(document).ready(function() {
 
 // Ends accordion tabs section
 
+// Starts Bubbles-3d section
+
+	$('div.bubbles-3d ul.bubbles-3d-container li.bubbles-3d-item').click(function(){
+		var $secondLeft;
+		var $seconRight;
+		var $thirdLeft;
+		var $thirdRight;
+		var lengthLeft = $(this).prevAll().length;
+		var lengthRight = $(this).nextAll().length;
+
+		$(this).prevAll().each(function(){
+			$(this).removeClass();
+			$(this).addClass('bubbles-3d-item');
+		});
+		$(this).nextAll().each(function(){
+			$(this).removeClass();
+			$(this).addClass('bubbles-3d-item');
+		});
+
+		if(lengthLeft > 0){
+			$secondLeft = $(this).prev();
+			$secondLeft.addClass('bubble-second-left');
+
+			if(lengthLeft > 1){
+				$thirdLeft = $(this).prev().prev();
+				$thirdLeft.addClass('bubble-third-left');
+				
+				if($thirdLeft.prevAll().length > 0){
+					$thirdLeft.prevAll().each(function(){
+						$(this).addClass('bubble-hidden');
+					});
+				}
+			}
+		}
+		if(lengthRight > 0){
+			$secondRight = $(this).next();
+			$secondRight.addClass('bubble-second-right');
+			
+			if(lengthRight > 1){
+				$thirdRight = $(this).next().next();
+				$thirdRight.addClass('bubble-third-right');
+				
+				if($thirdRight.nextAll().length > 0){
+					$thirdRight.nextAll().each(function(){
+						$(this).addClass('bubble-hidden');
+					});
+				}
+			}
+		}
+
+		$(this).removeClass();
+		$(this).addClass('bubbles-3d-item');
+		$(this).addClass('active');
+
+		if(lengthLeft == 1){
+			$(this).prev().addClass('bubble-penultimate-left');
+		}
+		if(lengthLeft == 0){
+			$(this).addClass('bubble-last-left');
+		}
+	});
+
+// Ends Bubbles-3d section
+
 });
 
 (function (jQuery) {
