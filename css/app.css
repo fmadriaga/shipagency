@@ -2723,4 +2723,84 @@ section.about {
     color: #5b8bd0;
     font-size: 70px; }
 
+section.team {
+  text-align: center;
+  min-height: 800px; }
+  section.team div.bubbles-3d {
+    max-width: 12;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    min-height: 100%; }
+    section.team div.bubbles-3d::after {
+      clear: both;
+      content: "";
+      display: table; }
+    section.team div.bubbles-3d ul.bubbles-3d-container {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 82.94039%;
+      margin-left: 8.5298%;
+      position: relative; }
+      section.team div.bubbles-3d ul.bubbles-3d-container:last-child {
+        margin-right: 0; }
+      section.team div.bubbles-3d ul.bubbles-3d-container li.bubbles-3d-item {
+        height: 300px;
+        width: 100%;
+        position: absolute; }
+        section.team div.bubbles-3d ul.bubbles-3d-container li.bubbles-3d-item div {
+          height: 300px;
+          width: 300px;
+          overflow: hidden;
+          border-top-left-radius: 50%;
+          border-top-right-radius: 50%;
+          border-bottom-right-radius: 50%;
+          border-top-right-radius: 50%;
+          border-bottom-left-radius: 50%;
+          border-bottom-right-radius: 50%;
+          border-bottom-left-radius: 50%;
+          border-top-left-radius: 50%; }
+          section.team div.bubbles-3d ul.bubbles-3d-container li.bubbles-3d-item div img {
+            width: 100%; }
+        section.team div.bubbles-3d ul.bubbles-3d-container li.bubbles-3d-item article {
+          float: left;
+          display: block;
+          margin-right: 2.35765%;
+          width: 65.88078%;
+          margin-left: 17.05961%;
+          display: none; }
+          section.team div.bubbles-3d ul.bubbles-3d-container li.bubbles-3d-item article:last-child {
+            margin-right: 0; }
+        section.team div.bubbles-3d ul.bubbles-3d-container li.bubbles-3d-item.active {
+          margin: 0 auto;
+          z-index: 3; }
+          section.team div.bubbles-3d ul.bubbles-3d-container li.bubbles-3d-item.active div {
+            margin: 0 auto; }
+          section.team div.bubbles-3d ul.bubbles-3d-container li.bubbles-3d-item.active article {
+            display: block; }
+        section.team div.bubbles-3d ul.bubbles-3d-container li.bubbles-3d-item.bubble-second-left, section.team div.bubbles-3d ul.bubbles-3d-container li.bubbles-3d-item.bubble-second-right {
+          z-index: 2; }
+          section.team div.bubbles-3d ul.bubbles-3d-container li.bubbles-3d-item.bubble-second-left div, section.team div.bubbles-3d ul.bubbles-3d-container li.bubbles-3d-item.bubble-second-right div {
+            height: 210px;
+            width: 210px;
+            margin-right: 20%;
+            margin-left: 20%; }
+        section.team div.bubbles-3d ul.bubbles-3d-container li.bubbles-3d-item.bubble-third-left, section.team div.bubbles-3d ul.bubbles-3d-container li.bubbles-3d-item.bubble-third-right {
+          z-index: 1; }
+          section.team div.bubbles-3d ul.bubbles-3d-container li.bubbles-3d-item.bubble-third-left div, section.team div.bubbles-3d ul.bubbles-3d-container li.bubbles-3d-item.bubble-third-right div {
+            height: 150px;
+            width: 150px;
+            margin-right: 10%;
+            margin-left: 10%; }
+        section.team div.bubbles-3d ul.bubbles-3d-container li.bubbles-3d-item.bubble-second-right div {
+          margin-top: estabaenesto;
+          margin-right: 20%;
+          margin-left: auto; }
+        section.team div.bubbles-3d ul.bubbles-3d-container li.bubbles-3d-item.bubble-third-right div {
+          margin-right: 10%;
+          margin-left: auto; }
+        section.team div.bubbles-3d ul.bubbles-3d-container li.bubbles-3d-item.bubble-hidden {
+          display: none; }
+
 /*# sourceMappingURL=app.css.map */
