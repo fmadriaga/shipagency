@@ -2772,12 +2772,13 @@ section.team {
             -webkit-filter: grayscale(80%);
             filter: grayscale(80%);
             -webkit-filter: brightness(20%);
-            filter: brightness(20%); }
+            filter: brightness(20%);
+            -webkit-transition: filter 0.5s ease-in-out;
+            -moz-transition: filter 0.5s ease-in-out;
+            transition: filter 0.5s ease-in-out; }
           section.team div.bubbles-3d ul.bubbles-3d-container li.bubbles-3d-item div:hover img {
-            -webkit-filter: grayscale(0%);
-            filter: grayscale(0%);
-            -webkit-filter: brightness(50%);
-            filter: brightness(50%); }
+            -webkit-filter: none;
+            filter: none; }
         section.team div.bubbles-3d ul.bubbles-3d-container li.bubbles-3d-item article {
           position: absolute;
           width: 200%;

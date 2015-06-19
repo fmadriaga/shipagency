@@ -352,6 +352,8 @@ $(document).ready(function() {
 // Starts Bubbles-3d section
 
 	$('div.bubbles-3d ul.bubbles-3d-container li.bubbles-3d-item').click(function(){
+		$('div.bubbles-3d ul.bubbles-3d-container').fadeOut(500);
+
 		var $secondLeft;
 		var $seconRight;
 		var $thirdLeft;
@@ -409,6 +411,8 @@ $(document).ready(function() {
 		if(lengthLeft == 0){
 			$(this).addClass('bubble-last-left');
 		}
+
+		$('div.bubbles-3d ul.bubbles-3d-container').fadeIn(500);
 	});
 
 // Ends Bubbles-3d section
