@@ -2725,7 +2725,8 @@ section.about {
 
 section.team {
   text-align: center;
-  min-height: 800px; }
+  min-height: 800px;
+  padding-top: 4em; }
   section.team div.bubbles-3d {
     max-width: 12;
     margin-left: auto;
@@ -2762,7 +2763,9 @@ section.team {
           border-bottom-left-radius: 50%;
           border-top-left-radius: 50%; }
           section.team div.bubbles-3d ul.bubbles-3d-container li.bubbles-3d-item div img {
-            width: 100%; }
+            width: 100%;
+            -webkit-filter: grayscale(70%);
+            filter: grayscale(70%); }
         section.team div.bubbles-3d ul.bubbles-3d-container li.bubbles-3d-item article {
           float: left;
           display: block;
@@ -2777,6 +2780,9 @@ section.team {
           z-index: 3; }
           section.team div.bubbles-3d ul.bubbles-3d-container li.bubbles-3d-item.active div {
             margin: 0 auto; }
+            section.team div.bubbles-3d ul.bubbles-3d-container li.bubbles-3d-item.active div img {
+              -webkit-filter: grayscale(0%);
+              filter: grayscale(0%); }
           section.team div.bubbles-3d ul.bubbles-3d-container li.bubbles-3d-item.active article {
             display: block; }
         section.team div.bubbles-3d ul.bubbles-3d-container li.bubbles-3d-item.bubble-second-left, section.team div.bubbles-3d ul.bubbles-3d-container li.bubbles-3d-item.bubble-second-right {
@@ -2784,21 +2790,20 @@ section.team {
           section.team div.bubbles-3d ul.bubbles-3d-container li.bubbles-3d-item.bubble-second-left div, section.team div.bubbles-3d ul.bubbles-3d-container li.bubbles-3d-item.bubble-second-right div {
             height: 210px;
             width: 210px;
-            margin-right: 20%;
-            margin-left: 20%; }
+            margin: 45px 18%; }
         section.team div.bubbles-3d ul.bubbles-3d-container li.bubbles-3d-item.bubble-third-left, section.team div.bubbles-3d ul.bubbles-3d-container li.bubbles-3d-item.bubble-third-right {
           z-index: 1; }
           section.team div.bubbles-3d ul.bubbles-3d-container li.bubbles-3d-item.bubble-third-left div, section.team div.bubbles-3d ul.bubbles-3d-container li.bubbles-3d-item.bubble-third-right div {
             height: 150px;
             width: 150px;
-            margin-right: 10%;
-            margin-left: 10%; }
+            margin: 75px 5%; }
         section.team div.bubbles-3d ul.bubbles-3d-container li.bubbles-3d-item.bubble-second-right div {
-          margin-top: estabaenesto;
-          margin-right: 20%;
+          margin-top: 45px;
+          margin-right: 18%;
           margin-left: auto; }
         section.team div.bubbles-3d ul.bubbles-3d-container li.bubbles-3d-item.bubble-third-right div {
-          margin-right: 10%;
+          margin-top: 75px;
+          margin-right: 5%;
           margin-left: auto; }
         section.team div.bubbles-3d ul.bubbles-3d-container li.bubbles-3d-item.bubble-hidden {
           display: none; }

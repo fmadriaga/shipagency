@@ -1,6 +1,8 @@
 section.team
 	text-align: center
 	min-height: 800px
+	padding-top: 4em
+	
 
 	div.bubbles-3d
 		$bubble-size: 300px
@@ -30,6 +32,7 @@ section.team
 
 					img
 						width: 100%
+						+filter(grayscale(70%))
 
 				article
 					+span-columns(8)
@@ -51,6 +54,9 @@ section.team
 					div
 						+margin(0px auto)
 
+						img
+							+filter(grayscale(0%))
+
 					article
 						display: block
 
@@ -58,24 +64,24 @@ section.team
 					z-index: 2
 					div
 						+size($bubble-second-size)
-						+margin(null 20%)
+						+margin(($bubble-size * 0.15) 18%)
 
 				&.bubble-third-left
 					z-index: 1
 
 					div
 						+size($bubble-third-size)
-						+margin(null 10%)
+						+margin(($bubble-size * 0.25) 5%)
 
 				&.bubble-second-right
 					@extend .bubble-second-left
 					div
-						+margin(estabaenesto 20% null auto)
+						+margin(($bubble-size * 0.15) 18% null auto)
 
 				&.bubble-third-right
 					@extend .bubble-third-left
 					div
-						+margin(null 10% null auto)
+						+margin(($bubble-size * 0.25) 5% null auto)
 				
 				&.bubble-hidden
 					display: none
