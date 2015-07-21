@@ -2732,11 +2732,13 @@ section.team {
   section.team article.main-section {
     color: white; }
   section.team div.bubbles-3d {
+    width: 100%;
     max-width: 12;
     margin-left: auto;
     margin-right: auto;
     position: relative;
-    min-height: 100%; }
+    min-height: 100%;
+    height: auto; }
     section.team div.bubbles-3d::after {
       clear: both;
       content: "";
@@ -2752,12 +2754,11 @@ section.team {
         margin-right: 0; }
       section.team div.bubbles-3d ul.bubbles-3d-container li.bubbles-3d-item {
         position: relative;
-        height: 300px;
         color: white;
         float: left; }
         section.team div.bubbles-3d ul.bubbles-3d-container li.bubbles-3d-item div {
-          height: 300px;
-          width: 300px;
+          height: 100%;
+          width: 100%;
           overflow: hidden;
           border-top-left-radius: 50%;
           border-top-right-radius: 50%;
@@ -2772,10 +2773,7 @@ section.team {
             -webkit-filter: grayscale(80%);
             filter: grayscale(80%);
             -webkit-filter: brightness(20%);
-            filter: brightness(20%);
-            -webkit-transition: filter 0.5s ease-in-out;
-            -moz-transition: filter 0.5s ease-in-out;
-            transition: filter 0.5s ease-in-out; }
+            filter: brightness(20%); }
           section.team div.bubbles-3d ul.bubbles-3d-container li.bubbles-3d-item div:hover img {
             -webkit-filter: none;
             filter: none; }
@@ -2786,55 +2784,48 @@ section.team {
           margin-right: 50%;
           margin-left: -50%;
           display: none; }
-        section.team div.bubbles-3d ul.bubbles-3d-container li.bubbles-3d-item.active {
+        section.team div.bubbles-3d ul.bubbles-3d-container li.bubbles-3d-item.bubbles-active {
           margin: 0 auto;
           z-index: 3;
-          height: 100%; }
-          section.team div.bubbles-3d ul.bubbles-3d-container li.bubbles-3d-item.active div {
+          width: 35.9%; }
+          section.team div.bubbles-3d ul.bubbles-3d-container li.bubbles-3d-item.bubbles-active div {
             margin: 0 auto; }
-            section.team div.bubbles-3d ul.bubbles-3d-container li.bubbles-3d-item.active div img {
+            section.team div.bubbles-3d ul.bubbles-3d-container li.bubbles-3d-item.bubbles-active div img {
               -webkit-filter: grayscale(0%);
               filter: grayscale(0%); }
-          section.team div.bubbles-3d ul.bubbles-3d-container li.bubbles-3d-item.active article {
+          section.team div.bubbles-3d ul.bubbles-3d-container li.bubbles-3d-item.bubbles-active article {
             display: block; }
-        section.team div.bubbles-3d ul.bubbles-3d-container li.bubbles-3d-item.bubble-second-left {
+        section.team div.bubbles-3d ul.bubbles-3d-container li.bubbles-3d-item.bubbles-second-left {
           z-index: 2;
-          margin-right: -3%; }
-          section.team div.bubbles-3d ul.bubbles-3d-container li.bubbles-3d-item.bubble-second-left div {
-            height: 210px;
-            width: 210px;
-            margin-top: 45px;
-            margin-bottom: 45px; }
-        section.team div.bubbles-3d ul.bubbles-3d-container li.bubbles-3d-item.bubble-third-left {
+          width: 22%;
+          margin-right: -2.5%;
+          margin-top: 7%; }
+        section.team div.bubbles-3d ul.bubbles-3d-container li.bubbles-3d-item.bubbles-third-left {
           z-index: 1;
-          margin-right: -3%;
-          margin-left: 7.5%; }
-          section.team div.bubbles-3d ul.bubbles-3d-container li.bubbles-3d-item.bubble-third-left div {
-            height: 150px;
-            width: 150px;
-            margin-top: 75px;
-            margin-bottom: 75px; }
-        section.team div.bubbles-3d ul.bubbles-3d-container li.bubbles-3d-item.bubble-second-right {
+          width: 15%;
+          margin-right: -2.5%;
+          margin-top: 10.5%; }
+        section.team div.bubbles-3d ul.bubbles-3d-container li.bubbles-3d-item.bubbles-second-right {
           z-index: 2;
-          margin-left: -3%; }
-          section.team div.bubbles-3d ul.bubbles-3d-container li.bubbles-3d-item.bubble-second-right div {
-            height: 210px;
-            width: 210px;
-            margin-top: 45px;
-            margin-bottom: 45px; }
-        section.team div.bubbles-3d ul.bubbles-3d-container li.bubbles-3d-item.bubble-third-right {
+          width: 22%;
+          margin-left: -2.5%;
+          margin-top: 7%; }
+        section.team div.bubbles-3d ul.bubbles-3d-container li.bubbles-3d-item.bubbles-third-right {
           z-index: 1;
-          margin-left: -3%; }
-          section.team div.bubbles-3d ul.bubbles-3d-container li.bubbles-3d-item.bubble-third-right div {
-            height: 150px;
-            width: 150px;
-            margin-top: 75px;
-            margin-bottom: 75px; }
-        section.team div.bubbles-3d ul.bubbles-3d-container li.bubbles-3d-item.bubble-hidden {
-          display: none; }
-        section.team div.bubbles-3d ul.bubbles-3d-container li.bubbles-3d-item.bubble-penultimate-left {
-          margin-left: 150px; }
-        section.team div.bubbles-3d ul.bubbles-3d-container li.bubbles-3d-item.bubble-last-left {
-          margin-left: calc(50% - (300px / 2)); }
+          width: 15%;
+          margin-left: -2.5%;
+          margin-top: 10.5%; }
+        section.team div.bubbles-3d ul.bubbles-3d-container li.bubbles-3d-item.bubbles-hidden {
+          display: none;
+          -webkit-transition: display 1s ease-in;
+          -moz-transition: display 1s ease-in;
+          transition: display 1s ease-in; }
+          section.team div.bubbles-3d ul.bubbles-3d-container li.bubbles-3d-item.bubbles-hidden div {
+            height: 0px;
+            width: 0px; }
+        section.team div.bubbles-3d ul.bubbles-3d-container li.bubbles-3d-item.bubbles-penultimate-left {
+          margin-left: 12.5%; }
+        section.team div.bubbles-3d ul.bubbles-3d-container li.bubbles-3d-item.bubbles-last-left {
+          margin-left: 32%; }
 
 /*# sourceMappingURL=app.css.map */

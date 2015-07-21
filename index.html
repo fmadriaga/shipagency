@@ -12,6 +12,7 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="js/bubbles-3d.js"></script>
 </head>
 <body>
 <!--
@@ -137,7 +138,7 @@
 		</article>
 		<div class="bubbles-3d">
 			<ul class="bubbles-3d-container">
-				<li class="bubbles-3d-item bubble-third-left">
+				<li class="bubbles-3d-item bubbles-third-left">
 					<div><img src="images/team-erica-jane-barry.jpg" alt="Team member"></div>
 					<article>
 						<h3>Erica Jane Barry</h3>
@@ -151,7 +152,7 @@
 						</ul>
 					</article>
 				</li>
-				<li class="bubbles-3d-item bubble-second-left">
+				<li class="bubbles-3d-item bubbles-second-left">
 					<div><img src="images/team-hannibal-lecter.jpeg" alt="Team member"></div>
 					<article>
 						<h3>Hannibal Lecter</h3>
@@ -165,7 +166,7 @@
 						</ul>
 					</article>
 				</li>
-				<li class="bubbles-3d-item active">
+				<li class="bubbles-3d-item bubbles-active">
 					<div><img src="images/team-morgan.jpg" alt="Team member"></div>
 					<article>
 						<h3>Nelson Mandela</h3>
@@ -179,7 +180,7 @@
 						</ul>
 					</article>
 				</li>
-				<li class="bubbles-3d-item bubble-second-right">
+				<li class="bubbles-3d-item bubbles-second-right">
 					<div><img src="images/team-miranda-priestly.jpg" alt="Team member"></div>
 					<article>
 						<h3>Miranda Priestly</h3>
@@ -193,7 +194,7 @@
 						</ul>
 					</article>
 				</li>
-				<li class="bubbles-3d-item bubble-third-right">
+				<li class="bubbles-3d-item bubbles-third-right">
 					<div><img src="images/team-harry-sanborn.jpg" alt="Team member"></div>
 					<article>
 						<h3>Harry Sanborn</h3>
@@ -207,7 +208,7 @@
 						</ul>
 					</article>
 				</li>
-				<li class="bubbles-3d-item bubble-hidden">
+				<li class="bubbles-3d-item bubbles-hidden">
 					<div><img src="images/team-kyle-pratt.jpg" alt="Team member"></div>
 					<article>
 						<h3>Kyle Pratt</h3>
@@ -221,7 +222,7 @@
 						</ul>
 					</article>
 				</li>
-				<li class="bubbles-3d-item bubble-hidden">
+				<li class="bubbles-3d-item bubbles-hidden">
 					<div><img src="images/team-paul-edgecomb.jpg" alt="Team member"></div>
 					<article>
 						<h3>Paul Egecomb</h3>
@@ -350,73 +351,8 @@ $(document).ready(function() {
 // Ends accordion tabs section
 
 // Starts Bubbles-3d section
-
-	$('div.bubbles-3d ul.bubbles-3d-container li.bubbles-3d-item').click(function(){
-		$('div.bubbles-3d ul.bubbles-3d-container').fadeOut(500);
-
-		var $secondLeft;
-		var $seconRight;
-		var $thirdLeft;
-		var $thirdRight;
-		var lengthLeft = $(this).prevAll().length;
-		var lengthRight = $(this).nextAll().length;
-
-		$(this).prevAll().each(function(){
-			$(this).removeClass();
-			$(this).addClass('bubbles-3d-item');
-		});
-		$(this).nextAll().each(function(){
-			$(this).removeClass();
-			$(this).addClass('bubbles-3d-item');
-		});
-
-		if(lengthLeft > 0){
-			$secondLeft = $(this).prev();
-			$secondLeft.addClass('bubble-second-left');
-
-			if(lengthLeft > 1){
-				$thirdLeft = $(this).prev().prev();
-				$thirdLeft.addClass('bubble-third-left');
-				
-				if($thirdLeft.prevAll().length > 0){
-					$thirdLeft.prevAll().each(function(){
-						$(this).addClass('bubble-hidden');
-					});
-				}
-			}
-		}
-		if(lengthRight > 0){
-			$secondRight = $(this).next();
-			$secondRight.addClass('bubble-second-right');
-			
-			if(lengthRight > 1){
-				$thirdRight = $(this).next().next();
-				$thirdRight.addClass('bubble-third-right');
-				
-				if($thirdRight.nextAll().length > 0){
-					$thirdRight.nextAll().each(function(){
-						$(this).addClass('bubble-hidden');
-					});
-				}
-			}
-		}
-
-		$(this).removeClass();
-		$(this).addClass('bubbles-3d-item');
-		$(this).addClass('active');
-
-		if(lengthLeft == 1){
-			$(this).prev().addClass('bubble-penultimate-left');
-		}
-		if(lengthLeft == 0){
-			$(this).addClass('bubble-last-left');
-		}
-
-		$('div.bubbles-3d ul.bubbles-3d-container').fadeIn(500);
-	});
-
+	$("ul.bubbles-3d-container").bubbles3d();
 // Ends Bubbles-3d section
-
 });
 
 (function (jQuery) {
