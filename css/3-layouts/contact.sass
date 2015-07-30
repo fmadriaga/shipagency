@@ -1,0 +1,34 @@
+section.contacto
+	+padding(4em null 4em null)
+	+outer-container(12)
+	+background(url('../images/contact-background.jpg'))
+	background-size: auto 120%
+	background-position-x: 50%
+	background-position-y: 100%
+
+	article.main-section
+		+span-columns(12)
+		color: white
+	
+	div#map_canvas
+		margin-bottom: 3em
+
+	div.formulario
+		+span-columns(5)
+		+shift(1)
+
+		+media($mobile)
+			+span-columns(10)
+
+		form
+			input#ctoEnviarMsj
+				display: block
+				margin: 0px auto
+
+	ul.contact-info
+		+span-columns(5)
+		color: white
+
+		+media($mobile)
+			+span-columns(10)
+			+shift(1)

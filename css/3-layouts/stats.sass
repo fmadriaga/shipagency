@@ -1,0 +1,42 @@
+section.fun-facts
+	+outer-container(12)
+	+padding(4em null 4em null)
+	+background(url('../images/stats-background.jpg'))
+	background-size: auto 120%
+	background-position-x: 50%
+
+	article.main-section
+		color: white
+
+	ul.stats
+		+span-columns(8)
+		+shift(2)
+
+		li
+			+span-columns(2 of 8)
+			text-align: center
+			color: white
+			+media($tablet-portrait)
+				+span-columns(4 of 8)
+			+media($mobile)
+				+span-columns(4 of 8)
+
+			i
+				font-size: 4em
+			h4
+				font-size: 4em
+				margin-bottom: 0px
+				color: $light-blue
+				+media($tablet-portrait)
+					font-size: 3em
+				+media($mobile)
+					font-size: 3em
+			p
+				text-transform: uppercase
+				font-weight: bold
+
+			&:nth-child(even)
+				+media($tablet-portrait)
+					+omega()
+				+media($mobile)
+					+omega()

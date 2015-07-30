@@ -12,7 +12,11 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="js/main.js"></script>
     <script src="js/bubbles-3d.js"></script>
+    <script src="js/smoothScroll.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/plugins/ScrollToPlugin.min.js"></script>
 </head>
 <body>
 <!--
@@ -39,13 +43,14 @@
 	<nav class="main-nav" id="scroll-link-1">
 		<div class="container">
 			<div class="logo"><a href="#">Shipagency</a></div>
-			<ul>
-				<li><a href="#">Nosotros</a></li>
-				<li><a href="#">Servicios</a></li>
-				<li><a href="#">Puertos</a></li>
-				<li><a href="#">Carga</a></li>
-				<li><a href="#">Distancias</a></li>
-				<li><a href="#">Contacto</a></li>
+			<div class="menu-kicker"><a href="#"><i class="fa fa-th-list"></i></a></div>
+			<ul id="menu-list">
+				<li><a class="scroll-on-page-link" href="#nosotros">Nosotros</a></li>
+				<li><a class="scroll-on-page-link" href="#equipo">Equipo</a></li>
+				<li><a class="scroll-on-page-link" href="#servicios">Servicios</a></li>
+				<li><a class="scroll-on-page-link" href="#datos">Datos</a></li>
+				<li><a class="scroll-on-page-link" href="#testimonios">Testimonios</a></li>
+				<li><a class="scroll-on-page-link" href="#contacto">Contacto</a></li>
 			</ul>
 		</div>
 	</nav>
@@ -55,7 +60,7 @@
 
 <main role="main" class="main-home">
 	
-	<section class="about">
+	<section class="about" id="nosotros">
 		<article class="main-section">
 			<h2>Nosotros</h2>
 			<p>Doloremque, minus, blanditiis, voluptatibus nulla quia ipsam sequi quos iusto aliquam.</p>
@@ -124,14 +129,10 @@
 					</article>
 				</li>
 			</ul>
-
-
 		</div>
-
-
 	</section>
 
-	<section class="team">
+	<section class="team" id="equipo">
 		<article class="main-section">
 			<h2>El mejor equipo</h2>
 			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error iure distinctio voluptate numquam vero ipsum itaque accusamus, a alias obcaecati eaque doloremque voluptates sunt totam labore, nisi. Voluptas id, similique.</p>
@@ -240,50 +241,182 @@
 		</div>
 	</section>
 
+	<section class="services" id="servicios">
+		<article class="main-section">
+			<h2>Servicios</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error iure distinctio voluptate numquam vero ipsum itaque accusamus, a alias obcaecati eaque doloremque voluptates sunt totam labore, nisi. Voluptas id, similique.</p>
+		</article>
 
+		<ul class="ls-services">
+			<li>
+				<article>
+					<h3>Marítimos</h3>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil eaque sequi natus odios</p>
+				</article>
+				<div><div class="icon"><a href="#"><i class="fa fa-ship"></i></i></a></div></div>
+			</li>
+			<li>
+				<div><div class="icon"><a href="#"><i class="fa fa-flag"></i></a></div></div>
+				<article>
+					<h3>Portuarios</h3>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus ea, voluptas expedita placeat</p>
+				</article>
+			</li>
+			<li>
+				<article>
+					<h3>Logísticos</h3>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur, cupiditate, dolorum.</p>
+				</article>
+				<div><div class="icon"><a href="#"><i class="fa fa-globe"></i></a></div></div>
+			</li>
+			<li>
+				<div><div class="icon"><a href="#"><i class="fa fa-tag"></i></a></div></div>
+				<article>
+					<h3>Navegación</h3>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita cupiditate sapiente dolor</p>
+				</article>
+			</li>
+			<li>
+				<article>
+					<h3>Distribución</h3>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati neque quaerat vero at iste!</p>
+				</article>
+				<div><div class="icon"><a href="#"><i class="fa fa-truck"></i></a></div></div>
+			</li>
+			<li>
+				<div><div class="icon"><a href="#"><i class="fa fa-life-ring"></i></a></div></div>
+				<article>
+					<h3>Remolcadores</h3>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti hic facere impedit omnis</p>
+				</article>
+			</li>
+			<li>
+				<article>
+					<h3>Comercio Exterior</h3>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius nisi sequi tenetur perspiciatis</p>
+				</article>
+				<div><div class="icon"><a href="#"><i class="fa fa-comment"></i></a></div></div>
+			</li>
+			<li>
+				<div><div class="icon"><a href="#"><i class="fa fa-cogs"></i></a></div></div>
+				<article>
+					<h3>Ingeniería Industrial</h3>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi voluptatem dolorum provident</p>
+				</article>
+			</li>
+		</ul>
+	</section>
 
-	<div class="grid-items">
-	  <a href="javascript:void(0)" class="grid-item">
-	    <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/placeholder_logo_1.png" alt="">
-	    <h1>Grid Item</h1>
-	    <p>Lorem ipsum dolor sit amet, elit. Rem, illum.</p>
-	  </a>
-	  <a href="javascript:void(0)" class="grid-item grid-item-big grid-item-image">
-	    <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/placeholder_logo_2.png" alt="">
-	    <h1>Grid Item With an Image</h1>
-	    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem, illum.</p>
-	  </a>
-	  <a href="javascript:void(0)" class="grid-item grid-item-big">
-	    <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/placeholder_logo_3.png" alt="">
-	    <h1>Another Wide Item</h1>
-	    <p>Lorem ipsum consectetur dolor sit amet, consectetur adipisicing elit. Rem, illum.</p>
-	  </a>
-	  <a href="javascript:void(0)" class="grid-item">
-	    <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/placeholder_logo_2.png" alt="">
-	    <h1>Last Grid Item</h1>
-	    <p>Lorem ipsum dolor sit amet, elit. Rem, illum.</p>
-	  </a>
-	  <a href="javascript:void(0)" class="grid-item">
-	    <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/placeholder_logo_2.png" alt="">
-	    <h1>Last Grid Item</h1>
-	    <p>Lorem ipsum dolor sit amet, elit. Rem, illum.</p>
-	  </a>
-	  <a href="javascript:void(0)" class="grid-item">
-	    <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/placeholder_logo_3.png" alt="">
-	    <h1>A Grid Item</h1>
-	    <p>Lorem ipsum dolor sit amet, elit. Rem, illum.</p>
-	  </a>
-	  <a href="javascript:void(0)" class="grid-item">
-	    <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/placeholder_logo_1.png" alt="">
-	    <h1>Item</h1>
-	    <p>Lorem ipsum dolor sit amet, elit. Rem, illum.</p>
-	  </a>
-	</div>
+	<section class="fun-facts" id="datos">
+		<article class="main-section">
+			<h2>Datos curiosos</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum cumque doloribus ipsum.</p>
+		</article>
+		<ul class="stats">
+			<li>
+				<i class="fa fa-globe"></i>
+				<h4>3925</h4>
+				<p>Destinos logrados</p>
+			</li>
+			<li>
+				<i class="fa fa-thumbs-o-up"></i>
+				<h4>2549</h4>
+				<p>Clientes felices</p>
+			</li>
+			<li>
+				<i class="fa fa-truck"></i>
+				<h4>5394</h4>
+				<p>Cargas entregadas</p>
+			</li>
+			<li>
+				<i class="fa fa-flag"></i>
+				<h4>7892</h4>
+				<p>Cargas totales</p>
+			</li>
+		</ul>
+	</section>
+
+	<section class="testimonials" id="testimonios">
+		<article class="main-section">
+			<h2>Testimonios</h2>
+			<p>Lo que dicen nuestros clientes:</p>
+		</article>
+		<ul class="testimonios">
+			<li>
+				<div class="client"><div><img src="images/team-harry-sanborn.jpg" alt=""></div></div>
+				<div class="icon"><div><i class="fa fa-quote-left"></i></div></div>
+				<article>
+					<h3>Harry Sanborn</h3>
+					<h5>Alguien tiene que ceder</h5>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex, iste nostrum, libero ipsam suscipit deserunt hic labore praesentium odio assumenda eius nihil adipisci. Eius, et, sint. Repellat odio culpa numquam?</p>
+				</article>
+			</li>
+			<li>
+				<article>
+					<h3>Kyle Pratt</h3>
+					<h5>Plan de vuelo</h5>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem repellat suscipit tenetur at obcaecati tempore iure placeat maiores, illum dolorum, iste veniam aliquid veritatis commodi alias, dolorem odit, blanditiis qui.</p>
+				</article>
+				<div class="icon"><div><i class="fa fa-quote-left"></i></div></div>
+				<div class="client"><div><img src="images/team-kyle-pratt.jpg" alt=""></div></div>
+			</li>
+			<li>
+				<div class="client"><div><img src="images/team-paul-edgecomb.jpg" alt=""></div></div>
+				<div class="icon"><div><i class="fa fa-quote-left"></i></div></div>
+				<article>
+					<h3>Paul Edgecomb</h3>
+					<h5>La milla verde</h5>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga minus sunt delectus ipsum dolore quidem vitae officia, aspernatur dolorem. Dolores cupiditate alias porro, rem itaque iste necessitatibus vero vel quia!</p>
+				</article>
+			</li>
+		</ul>
+		<input type="button" value="Cargar Mas">
+	</section>
+
+	<section class="contacto" id="contacto">
+		<article class="main-section">
+			<h2>Contacto</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+		</article>
+		<div id="map_canvas"></div>
+		<div class="formulario">
+			<form action="#">
+				<input type="text" id="ctoNombre" placeholder="Su nombre">
+				<input type="email" id="ctoMail" placeholder="Su e-mail">
+				<textarea name="mensaje" id="ctoMensaje" cols="30" rows="10" placeholder="Su mensaje"></textarea>
+				<input type="submit" id="ctoEnviarMsj" value="Enviar">
+			</form>
+		</div>
+		<ul class="contact-info">
+			<li>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam minus recusandae incidunt, facere culpa laboriosam repellendus iure maxime asperiores, neque autem! Illum asperiores repellat rem aliquam minus pariatur laudantium deserunt.</p>
+				<p>Canelones 2179</p>
+				<p>Montevideo, Uruguay</p>
+				<p>CP: 11200</p>
+				<p>Tel: 24004008</p>
+				<p>Fax: 24004008 Int 104</p>
+			</li>
+		</ul>
+	</section>
+
 </main>
 
 
 <script type="text/javascript">
 $(document).ready(function() {
+	$("section.team").parallax();
+	$("section.fun-facts").parallax();
+	$("section.contacto").parallax();
+	$("div.menu-kicker>a").click(function(){event.preventDefault(); $("#menu-list").addClass("mobile-menu");});
+	//$("div.icon").css("height", $("div.icon").width());
+	$("#menu-list").click(function(){$(this).removeClass("mobile-menu");});
+	$("section.testimonials").find("div.client").each(function(){
+		var ancho = $(this).find("div").width();
+		$(this).find("div").css("height", ancho);
+	});
+
+	$(window).smoothScroll();
+
 	var menuToggle = $('#js-mobile-menu').unbind();
 		$('#js-navigation-menu').removeClass("show");
 
@@ -294,6 +427,28 @@ $(document).ready(function() {
     			$('#js-navigation-menu').removeAttr('style');
   			}
 		});
+	});
+
+	$("section.team").scrollEffect({
+		elements: [ $("nav.main-nav") ],
+    	styles: [
+    		{ "position": "fixed", "box-shadow": "0px 1px 5px #888888", "height": "50px" }
+    	],
+    	stylesBack: [
+    		{ "position": "relative", "box-shadow": "none", "height": "auto" }
+    	]
+	});
+	var lastScrollTop = 0;
+	$(window).scroll(function(event){
+		if($("section.team").hasClass("scrolled")){
+			var st = $(this).scrollTop();
+			if (st > lastScrollTop){
+				$("nav.main-nav").css("top", "-50px");
+			} else {
+				$("nav.main-nav").css("top", "0px");
+			}
+			lastScrollTop = st;
+		}
 	});
 
 // Starts accordion tabs section
@@ -353,6 +508,8 @@ $(document).ready(function() {
 // Starts Bubbles-3d section
 	$("ul.bubbles-3d-container").bubbles3d();
 // Ends Bubbles-3d section
+
+
 });
 
 (function (jQuery) {
@@ -388,6 +545,61 @@ jQuery(function(){
 
 </script>
 
+<script src="https://maps.googleapis.com/maps/api/js"></script>
+<script>
+  var bittersMap = (function () {
+    var myLatlng = new google.maps.LatLng(-34.906963, -56.167865),
+        mapCenter = new google.maps.LatLng(-34.906963, -56.167865),
+        mapCanvas = document.getElementById('map_canvas'),
+        mapOptions = {
+          center: mapCenter,
+          zoom: 15,
+          scrollwheel: false,
+          draggable: true,
+          disableDefaultUI: true,
+          mapTypeId: google.maps.MapTypeId.ROADMAP
+        },
+        map = new google.maps.Map(mapCanvas, mapOptions),
+        contentString =
+          '<div id="content">'+
+          '<div id="siteNotice">'+
+          '</div>'+
+          '<h1 id="firstHeading" class="firstHeading">thoughtbot</h1>'+
+          '<div id="bodyContent"'+
+          '<p>Sveavägen 98</p>'+
+          '</div>'+
+          '</div>',
+        infowindow = new google.maps.InfoWindow({
+          content: contentString,
+          maxWidth: 300
+        }),
+        marker = new google.maps.Marker({
+          position: myLatlng,
+          map: map,
+          title: 'thoughtbot (Sweden)'
+        });
+
+    return {
+      init: function () {
+        map.set('styles', [{
+          featureType: 'landscape',
+          elementType: 'geometry',
+          stylers: [
+            { hue: '#ffff00' },
+            { saturation: 30 },
+            { lightness: 10}
+          ]}
+        ]);
+
+        google.maps.event.addListener(marker, 'click', function () {
+          infowindow.open(map,marker);
+        });
+      }
+    };
+  }());
+
+  bittersMap.init();
+</script>
 	
 </body>
 </html>

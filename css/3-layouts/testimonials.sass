@@ -1,0 +1,82 @@
+section.testimonials
+	+padding(4em null 4em null)
+	width: 100%
+	+outer-container(12)
+
+	article.main-section
+		padding-bottom: 2em
+
+	ul.testimonios
+		+span-columns(10)
+		+shift(1)
+
+		li
+			+span-columns(12 of 12)
+			padding-bottom: 2em
+
+			div.client
+				+span-columns(5 of 11)
+
+				+media($mobile)
+					display: none
+
+				div
+					overflow: hidden
+					+border-top-radius(50%)
+					+border-right-radius(50%)
+					+border-bottom-radius(50%)
+					+border-left-radius(50%)
+					width: 50%
+					border: solid 2px $light-blue
+
+					img
+						width: 100%
+						height: 100%
+
+			div.icon
+				+span-columns(1 of 11)
+
+				+media($mobile)
+					display: none
+
+				div
+					position: relative
+					width: 30px
+					height: 30px
+					+transform(rotate(45deg))
+					background-color: $light-blue
+					+border-top-radius(5px)
+					+border-right-radius(5px)
+					+border-bottom-radius(5px)
+					+border-left-radius(5px)
+					border-style: double
+					border-color: white
+
+					i
+						+transform(rotate(-45deg))
+						color: white
+						padding-top: 30%
+						padding-left: 15%
+
+
+			article
+				+span-columns(5 of 11)
+
+				+media($mobile)
+					+span-columns(12)
+					text-align: center
+
+				h3
+
+				h5
+
+				p
+		
+		li:nth-child(odd)
+			div.client
+				div
+					margin-left: 50%
+
+	input
+		display: block
+		margin: 0px auto

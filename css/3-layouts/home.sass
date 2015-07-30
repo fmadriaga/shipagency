@@ -70,6 +70,10 @@
 				+size(100% 60px)
 				+background(white)
 				+outer-container(100%)
+				top: 0px
+				z-index: 9999
+				+transition(top 500ms ease-in)
+				
 
 				.container
 					+size(100% 60px)
@@ -82,10 +86,21 @@
 					.logo
 						+flex(1)
 
+					.menu-kicker
+						font-size: 2em
+						display: none
+						float: left
+
+						+media($mobile)
+							display: block
+
 					ul
 						+flex(4)
 						+display(flex)
 						+justify-content(flex-end)
+
+						+media($mobile)
+							display: none
 	
 						li
 							display: inline
@@ -96,6 +111,24 @@
 
 								&:hover
 									color: lighten($base-menu-color, 40%)
+
+						&.mobile-menu
+							position: fixed
+							top: 0px
+							left: 0px
+							z-index: 9999
+							display: block
+							width: 100%
+							background-color: rgba(38,38,38, 0.7)
+
+							li
+								display: block
+								width: 100%
+								+padding(1em)
+
+								a
+									color: white
+
 		div.div-hr
 			+background(white)
 
@@ -108,7 +141,6 @@
 
 		main.main-home
 			+background(white)
-			padding-top: 5em
 
 			
 
